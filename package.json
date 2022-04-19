@@ -3,17 +3,31 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "big-integer": "^1.6.51",
+    "parcel": "^2.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.1",
+    "react-router-dom": "^5.3.0",
+    "styled-components": "^5.3.3",
+    "typescript": "^4.4.4"
+  },
   "devDependencies": {
+    "@types/react-dom": "^17.0.10",
+    "@types/styled-components": "^5.1.15",
     "circomlib": "^2.0.3",
     "hardhat": "^2.9.1",
-    "hardhat-circom": "^3.0.1"
+    "hardhat-circom": "^3.0.1",
+    "@types/react-router": "^5.1.17",
+    "@types/react-router-dom": "^5.3.1"
   },
   "engines": {
     "node": ">=16"
   },
   "scripts": {
     "circom:dev": "hardhat circom --deterministic --debug --verbose",
-    "circom:prod": "hardhat circom --verbose"
+    "circom:prod": "hardhat circom --verbose",
+    "client:start": "rm -rf .parcel-cache && cd client && mkdir -p dist && cp -r ./public ./dist && parcel src/index.html"
   }
 }

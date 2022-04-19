@@ -1,6 +1,10 @@
 # node
 node_modules/
 
+# client
+.parcel-cache
+dist
+
 # hardhat
 cache
 artifacts
