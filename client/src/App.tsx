@@ -182,7 +182,7 @@ function LandingPage() {
 }
 
 function VerifyBoardIdPage() {
-  const [boardID, setBoardID] = useState('0');
+  const [boardID, setBoardID] = useState('');
   const [boardIDProof, setBoardIDProof] = useState('');
   const [verifyState, setVerifyState] = useState<'verified' | 'failed' | 'unknown'>('unknown');
 
@@ -215,7 +215,7 @@ function VerifyBoardIdPage() {
           name={"proof"}
           value={boardIDProof}
           onChange={(e) => setBoardIDProof(e.target.value)}
-          placeholder={'board ID'}
+          placeholder={'proof'}
         />
       </div>
       <Spacer height={1}/>
